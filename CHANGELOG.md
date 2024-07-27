@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.1.0">
 
-## Unreleased (2024-07-10)
+## 0.1.0 (2024-07-27)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`d04dcbd`](https://github.com/stdlib-js/stdlib/commit/d04dcbd6dc3b0bf4a89bd3947d317fa5ff15bb38) - **docs:** remove private annotations in C comments _(by Philipp Burckhardt)_
 -   [`96f2299`](https://github.com/stdlib-js/stdlib/commit/96f22991788a808caa052cb3d1e1c9618091e3d3) - **feat:** add support for specifying integer size _(by Athan Reines)_
 -   [`d9dfc21`](https://github.com/stdlib-js/stdlib/commit/d9dfc219d84a0418eae579a882ba4fc9b841aecd) - **refactor:** use common implementation and document C API _(by Athan Reines)_
 -   [`659f752`](https://github.com/stdlib-js/stdlib/commit/659f752db18317bf5fc237fdbcad0d74b61e1ed9) - **style:** add missing spaces _(by Philipp Burckhardt)_
