@@ -56,6 +56,11 @@ where `x_i` and `y_i` are the individual elements on which the rotation is appli
 ## Usage
 
 ```javascript
+import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-srot/tags). For example,
+
+```javascript
 import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.1.0-deno/mod.js';
 ```
 
@@ -173,7 +178,7 @@ srot.ndarray( 2, x, 2, 2, y, 2, 2, 0.8, 0.6 );
 
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.1.0-deno/mod.js';
+import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@deno/mod.js';
 
 var opts = {
     'dtype': 'float32'
