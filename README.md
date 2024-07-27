@@ -58,6 +58,11 @@ where `x_i` and `y_i` are the individual elements on which the rotation is appli
 To use in Observable,
 
 ```javascript
+srot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-srot/tags). For example,
+
+```javascript
 srot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.1.0-umd/browser.js' )
 ```
 
@@ -70,7 +75,7 @@ var srot = require( 'path/to/vendor/umd/blas-base-srot/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -200,7 +205,7 @@ srot.ndarray( 2, x, 2, 2, y, 2, 2, 0.8, 0.6 );
 <html lang="en">
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
