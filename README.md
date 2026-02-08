@@ -56,6 +56,11 @@ where `x_i` and `y_i` are the individual elements on which the rotation is appli
 ## Usage
 
 ```javascript
+import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-srot/tags). For example,
+
+```javascript
 import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.2.1-esm/index.mjs';
 ```
 
@@ -178,7 +183,7 @@ srot.ndarray( 2, x, 2, 2, y, 2, 2, 0.8, 0.6 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@v0.2.1-esm/index.mjs';
+import srot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@esm/index.mjs';
 
 var opts = {
     'dtype': 'float32'
