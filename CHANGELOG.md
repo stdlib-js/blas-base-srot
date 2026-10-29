@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-18)
+## Unreleased (2026-10-29)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`4b4e172`](https://github.com/stdlib-js/stdlib/commit/4b4e172c17aa1ff0c634b4dad38376b51fd1cf85) - **test:** migrate `blas/base/srot` to ULP-based assertions [(#16141)](https://github.com/stdlib-js/stdlib/pull/16141) _(by Athan Reines)_
 -   [`7d88343`](https://github.com/stdlib-js/stdlib/commit/7d88343dc553ac2b116119cb618d3eee0f11a513) - **bench:** refactor to use dynamic memory allocation in `blas/base/srot` [(#10287)](https://github.com/stdlib-js/stdlib/pull/10287) _(by Prajjwal Bajpai)_
 -   [`9fc0b94`](https://github.com/stdlib-js/stdlib/commit/9fc0b943505f6b3fb58781fe53b726e65c061e2e) - **bench:** refactor to use string interpolation in `blas/base/srot` [(#10289)](https://github.com/stdlib-js/stdlib/pull/10289) _(by Prajjwal Bajpai)_
 
@@ -25,8 +26,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Prajjwal Bajpai
 
 </section>
