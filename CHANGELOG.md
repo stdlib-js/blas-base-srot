@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-29)
+## Unreleased (2026-11-03)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`4b4e172`](https://github.com/stdlib-js/stdlib/commit/4b4e172c17aa1ff0c634b4dad38376b51fd1cf85) - **test:** migrate `blas/base/srot` to ULP-based assertions [(#16141)](https://github.com/stdlib-js/stdlib/pull/16141) _(by Athan Reines)_
 -   [`7d88343`](https://github.com/stdlib-js/stdlib/commit/7d88343dc553ac2b116119cb618d3eee0f11a513) - **bench:** refactor to use dynamic memory allocation in `blas/base/srot` [(#10287)](https://github.com/stdlib-js/stdlib/pull/10287) _(by Prajjwal Bajpai)_
 -   [`9fc0b94`](https://github.com/stdlib-js/stdlib/commit/9fc0b943505f6b3fb58781fe53b726e65c061e2e) - **bench:** refactor to use string interpolation in `blas/base/srot` [(#10289)](https://github.com/stdlib-js/stdlib/pull/10289) _(by Prajjwal Bajpai)_
@@ -26,9 +27,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Philipp Burckhardt
 -   Prajjwal Bajpai
 
 </section>
