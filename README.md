@@ -49,38 +49,32 @@ where `x_i` and `y_i` are the individual elements on which the rotation is appli
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-srot
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-srot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var srot = require( 'path/to/vendor/umd/blas-base-srot/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.srot;
-})();
-</script>
+var srot = require( '@stdlib/blas-base-srot' );
 ```
 
 #### srot( N, x, strideX, y, strideY, c, s )
@@ -195,14 +189,9 @@ srot.ndarray( 2, x, 2, 2, y, 2, 2, 0.8, 0.6 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-srot@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var srot = require( '@stdlib/blas-base-srot' );
 
 var opts = {
     'dtype': 'float32'
@@ -217,11 +206,6 @@ console.log( y );
 srot( x.length, x, 1, y, 1, 0.8, 0.6 );
 console.log( x );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -230,7 +214,145 @@ console.log( y );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/srot.h"
+```
+
+#### c_srot( N, \*X, strideX, \*Y, strideY, c, s )
+
+Applies a plane rotation.
+
+```c
+float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f };
+float y[] = { 6.0f, 7.0f, 8.0f, 9.0f, 10.0f };
+
+c_srot( 5, x, 1, y, 1, 0.8f, 0.6f );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[inout] float*` first input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+-   **Y**: `[inout] float*` second input array.
+-   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
+-   **c**: `[in] float` cosine of the angle of rotation.
+-   **s**: `[in] float` sine of the angle of rotation.
+
+```c
+void c_srot( const CBLAS_INT N, float *X, const CBLAS_INT strideX, float *Y, const CBLAS_INT strideY, const float c, const float s );
+```
+
+#### c_srot_ndarray( N, \*X, strideX, offsetX, \*Y, strideY, offsetY, c, s )
+
+Applies a plane rotation using alternative indexing semantics.
+
+```c
+float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f };
+float y[] = { 6.0f, 7.0f, 8.0f, 9.0f, 10.0f };
+
+c_srot_ndarray( 5, x, 1, 0, y, 1, 0, 0.8f, 0.6f );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[inout] float*` first input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+-   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
+-   **Y**: `[inout] float*` second input array.
+-   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
+-   **offsetY**: `[in] CBLAS_INT` starting index for `Y`.
+-   **c**: `[in] float` cosine of the angle of rotation.
+-   **s**: `[in] float` sine of the angle of rotation.
+
+```c
+void c_srot_ndarray( const CBLAS_INT N, float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, float *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY, const float c, const float s );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/base/srot.h"
+#include <stdio.h>
+
+int main( void ) {
+    // Create strided arrays:
+    float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f };
+    float y[] = { 6.0f, 7.0f, 8.0f, 9.0f, 10.0f };
+
+    // Specify the number of elements:
+    const int N = 3;
+
+    // Specify stride lengths:
+    const int strideX = 2;
+    const int strideY = -2;
+
+    // Specify angle of rotation:
+    const float c = 0.8f;
+    const float s = 0.6f;
+
+    // Apply plane rotation:
+    c_srot( N, x, strideX, y, strideY, c, s );
+
+    // Print the result:
+    for ( int i = 0; i < 5; i++ ) {
+        printf( "x[ %i ] = %f, y[ %i ] = %f\n", i, x[ i ], i, y[ i ] );
+    }
+
+    // Apply plane rotation:
+    c_srot_ndarray( N, x, strideX, 0, y, strideY, 4, c, s );
+
+    // Print the result:
+    for ( int i = 0; i < 5; i++ ) {
+        printf( "x[ %i ] = %f, y[ %i ] = %f\n", i, x[ i ], i, y[ i ] );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
